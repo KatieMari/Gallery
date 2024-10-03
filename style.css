@@ -7,7 +7,12 @@
 /* Applies custom font with fallback font*/
 .custom-font {
     font-family: 'The-Cat', sans-serif;
-    color:rgb(142, 182, 182)
-    font: size 2.5em;
 }
+
+/* Adds style to h1 */
+h1{
+    font-size: 200px;
+color: rgb(157, 197, 197);
+}
+
 
