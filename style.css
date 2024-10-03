@@ -1,0 +1,13 @@
+/* Adds custom font from local files */
+@font-face {
+    font-family: 'The-Cat';
+    src: url(Gallery-Assets/Fonts/The-Cat.ttf)
+}
+
+/* Applies custom font with fallback font*/
+.custom-font {
+    font-family: 'The-Cat', sans-serif;
+    color:rgb(142, 182, 182)
+    font: size 2.5em;
+}
+
