@@ -1,13 +1,4 @@
-/* Adds custom font from local files */
-@font-face {
-    font-family: 'The-Cat';
-    src: url(Gallery-Assets/Fonts/The-Cat.ttf) format(truetype)
-}
-
-/* Applies custom font with fallback font*/
-.custom-font {
-    font-family: 'The-Cat', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 /* Styles for all Website */
 * {
@@ -15,22 +6,11 @@
     margin: 0;
 }
 
-
-/* Adds style to h1 */
+/* Heading and Title Styles */
 h1 {
-    /* Colour */
-    color: #D9A0A0;
-
-    /* Font Size */
-    font-size: calc(2rem + 2vw+ 2vh);
-
-    /* Alterntive Shadow - Soft */
-    /* text-shadow: 2px 2px 20px rgba(250, 250, 250, 0.5); */
-    text-shadow:
-        -2px -2px 0 #ffffff,
-        2px -2px 0 #ffffff,
-        -2px 2px 0 #ffffff,
-        2px 2px 0 #ffffff;
+    /* H1 Font Family */
+    font-family: "Pacifico", sans-serif;
+    font-size: calc(2rem + 2vw + 2vh);
 
     /* Padding and Margin */
     padding: 5px;
@@ -38,12 +18,12 @@ h1 {
     padding-right: 20%;
 
     /* Border Style */
-    border-style: groove;
-    border-width: 10px;
-    border-radius: 10px;
-    border-color: #D9A0A0;
+    border-style: solid;
+    border-width: 0.5vw;
+    border-radius: 5px;
 }
 
+/* Media Query for the Heading - below 870px, keep title at one size and remove border */
 @media (max-width: 870px) {
     h1 {
         font-size: calc(1rem);
@@ -52,48 +32,63 @@ h1 {
     }
 }
 
+/* Will Display content using Flex Property and be Centered */
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Will Change the Flex Direction to a Column. An element need to have display: flex for this to work */
 .flex-col {
     flex-direction: column;
 }
 
+/* Will Occupy 100% of the Viewpoint Width */
 .full-width {
     width: 100vw;
 }
 
+/* Used as the Container for each Image and Paragraph in the Gallery */
 .card {
     max-width: 300px;
 }
 
-.card-img {
+/* Style for Image inside a Card */
+.card img {
+    /* Size */
     width: 100%;
     height: 300px;
+
+    /* Image Automatically crop to cover all the space it can */
     object-fit: cover;
 }
 
+/* Style for the Title Div */
 #title-div {
-    /* Styles */
-    color: rgb(255, 0, 234);
-    background-color: #D9A0A0;
+    /* Colours */
+    color: #B2725F;
+    background-color: #FFCABB;
+
+    /* Size */
     height: 100px;
 }
 
 /* Cover Image Style */
 #cover-img {
+    /* Size */
     width: 70%;
-    height: 400px;
+    height: 300px;
+
+    /* Makes sure the Cropping Affects Feet but not Heads */
     object-fit: cover;
     object-position: center top;
 }
 
+/* Cover Image - Height will get Smaller as the Screen gets Smaller */
 @media (max-width: 900px) {
     #cover-img {
-        height: 400px;
+        height: 200px;
     }
 }
 
@@ -103,58 +98,54 @@ h1 {
     }
 }
 
+/* Below 400 px - Hide Image */
 @media (max-width: 400px) {
     #cover-img {
         display: none;
     }
 }
 
-/* gallery styles */
-
+/* Gallery Style */
 #gallery-div {
+    /* Default: Displays in a Row */
     display: grid;
     justify-content: center;
-    grid-template-areas:
-        "item-1 item-2 item-3 item-4";
+    grid-template-areas: "item1 item2 item3 item4";
 }
 
+/* 400px to 800px - Displays in 2 Columns */
 @media (max-width: 800px) {
     #gallery-div {
         grid-template-areas:
-            "item-1 item-2"
-            "item-3 item-4";
+            "item1 item2"
+            "item3 item4";
     }
 }
 
+/* Below 400px- display in 1 Column */
 @media (max-width: 400px) {
     #gallery-div {
         grid-template-areas:
-            "item-1"
-            "item-2"
-            "item-3"
-            "item-4"
+            "item1"
+            "item2"
+            "item3"
+            "item4";
     }
 }
 
-/* gallery items */
-
-#item-1 {
-    grid-area: item-1;
+/* Link Gallery Items to grid-area */
+#item1 {
+    grid-area: item1;
 }
 
-#item-2 {
-    grid-area: item-2;
+#item2 {
+    grid-area: item2;
 }
 
-#item-3 {
-    grid-area: item-3;
+#item3 {
+    grid-area: item3;
 }
 
-#item-4 {
-    grid-area: item-4;
+#item4 {
+    grid-area: item4;
 }
-
-
-
-
-
