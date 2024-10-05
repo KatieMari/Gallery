@@ -52,6 +52,9 @@ h1 {
 /* Used as the Container for each Image and Paragraph in the Gallery */
 .card {
     max-width: 300px;
+    min-width: 200px;
+    /* Centers Item when fewer than max columns */
+    margin: auto;
 }
 
 /* Style for Image inside a Card */
@@ -72,29 +75,35 @@ h1 {
 
     /* Size */
     height: 100px;
+
+    /* Border */
+    border-radius: 15px;
+
+    /* responsive font size */
+    font-size: calc(2rem + 2vw + 2vh);
 }
 
 /* Cover Image Style */
 #cover-img {
     /* Size */
     width: 70%;
-    height: 300px;
+    height: 400px;
 
     /* Makes sure the Cropping Affects Feet but not Heads */
     object-fit: cover;
-    object-position: center top;
+    object-position: 50% 50% ;
 }
 
 /* Cover Image - Height will get Smaller as the Screen gets Smaller */
-@media (max-width: 900px) {
+@media (max-width: 1365px) {
     #cover-img {
-        height: 200px;
+        height: 400px;
     }
 }
 
 @media (max-width: 500px) {
     #cover-img {
-        width: 100%;
+        width: 200%;
     }
 }
 
@@ -107,29 +116,51 @@ h1 {
 
 /* Gallery Style */
 #gallery-div {
+    width: 100vw;
     /* Default: Displays in a Row */
     display: grid;
     justify-content: center;
+    align-items: center;
+
+    /* Defines 4 Equal Columns for the Items */
+    grid-template-columns: repeat(4, 1fr);
+    
+    /* Makes Grid Areas match the */
     grid-template-areas: "item1 item2 item3 item4";
+
+    /* Add Spacing Between Items */
+    gap: 20px;
+
+    /* Padding for Symmetry */
+    padding: 20px;
+    
 }
 
-/* 400px to 800px - Displays in 2 Columns */
-@media (max-width: 800px) {
+/* 430px to 1365px - Displays in 2 Columns */
+@media (max-width: 1365px) {
     #gallery-div {
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
             "item1 item2"
             "item3 item4";
+
+            /* Ensures Gap is Maintained */
+            gap: 20px;
     }
 }
 
 /* Below 400px- display in 1 Column */
-@media (max-width: 400px) {
+@media (max-width: 430px) {
     #gallery-div {
+        grid-template-columns: 1fr;
         grid-template-areas:
             "item1"
             "item2"
             "item3"
             "item4";
+
+            /* Ensures Gap is Maintained */
+            gap: 20px;
     }
 }
 
