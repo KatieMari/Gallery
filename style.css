@@ -4,6 +4,8 @@
 * {
     padding: 0;
     margin: 0;
+    /* Adds Box Sizing for Better Layout Control */
+    box-sizing: border-box;
 }
 
 /* Heading and Title Styles */
@@ -18,17 +20,33 @@ h1 {
     padding-right: 20%;
 
     /* Border Style */
-    border-style: solid;
-    border-width: 0.5vw;
-    border-radius: 5px;
+    border: 2px solid #A66D3C;
+    border-radius: 10px;
+
+    /* Colour */
+    background-color: #F2E5BD;
+    color: #A66D3C;
+
+    /* Text Center */
+    text-align: center;
+
+    /* Smooth Background Colour Transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 2.5s ease, transform 2.5s ease;
 }
 
 /* Media Query for the Heading - below 870px, keep title at one size and remove border */
 @media (max-width: 870px) {
     h1 {
-        font-size: calc(1rem);
+        font-size: calc(1.5rem);
         border: none;
         padding: 0;
+
+        /* Removes Background Colour for Small Screens */
+        background-color: transparent;
+
+        /* Colour */
+        color: #F2B872
     }
 }
 
@@ -53,8 +71,26 @@ h1 {
 .card {
     max-width: 300px;
     min-width: 200px;
+
     /* Centers Item when fewer than max columns */
     margin: auto;
+
+    /* Prevents Overflow */
+    overflow: hidden;
+
+    /* Border */
+    border-radius: 15px;
+
+    /* Colour */
+    background-color: #F2F2F2;
+
+    /* Shadow Effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+    /* Smooth Transform and Shadow Transition */
+    transition: transform 3.5s, box-shadow 3.5s;
+
+
 }
 
 /* Style for Image inside a Card */
@@ -65,22 +101,56 @@ h1 {
 
     /* Image Automatically crop to cover all the space it can */
     object-fit: cover;
+
+    /* Rounded Top Corners */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    /* Smooth Zoom Effect on Hover */
+    transition: transform 3.5s;
+}
+
+/* Adds Hover Effect to card */
+.card:hover {
+    /* Slightly Lifts the card on Hover */
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 16px rgba(242, 184, 114, 0.7);
+}
+
+.card:hover img {
+    /* Slight Zoom on Hover */
+    transform: scale(1.15);
 }
 
 /* Style for the Title Div */
 #title-div {
     /* Colours */
-    color: #B2725F;
-    background-color: #FFCABB;
+    color: #A66D3C;
+    background-color: #F2E5BD;
 
     /* Size */
     height: 100px;
+    padding: 20px;
 
     /* Border */
     border-radius: 15px;
+    border: 2px solid #A66D3C;
 
-    /* responsive font size */
+    /* Shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+    /* Text Styling */
     font-size: calc(2rem + 2vw + 2vh);
+    text-align: center;
+    transition: transform 2.5s ease, box-shadow 2.5s ease;
+}
+
+/* Hover Effect for the Title Div */
+#title-div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    background-color: #F2B872;
 }
 
 /* Cover Image Style */
@@ -91,7 +161,10 @@ h1 {
 
     /* Makes sure the Cropping Affects Feet but not Heads */
     object-fit: cover;
-    object-position: 50% 50% ;
+    object-position: 50% 50%;
+
+    /* Border */
+    border-radius: 15px;
 }
 
 /* Cover Image - Height will get Smaller as the Screen gets Smaller */
@@ -124,7 +197,7 @@ h1 {
 
     /* Defines 4 Equal Columns for the Items */
     grid-template-columns: repeat(4, 1fr);
-    
+
     /* Makes Grid Areas match the */
     grid-template-areas: "item1 item2 item3 item4";
 
@@ -133,7 +206,7 @@ h1 {
 
     /* Padding for Symmetry */
     padding: 20px;
-    
+
 }
 
 /* 430px to 1365px - Displays in 2 Columns */
@@ -144,8 +217,8 @@ h1 {
             "item1 item2"
             "item3 item4";
 
-            /* Ensures Gap is Maintained */
-            gap: 20px;
+        /* Ensures Gap is Maintained */
+        gap: 20px;
     }
 }
 
@@ -159,8 +232,8 @@ h1 {
             "item3"
             "item4";
 
-            /* Ensures Gap is Maintained */
-            gap: 20px;
+        /* Ensures Gap is Maintained */
+        gap: 20px;
     }
 }
 
