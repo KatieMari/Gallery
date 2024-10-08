@@ -4,12 +4,6 @@
     width: 80%;
     height: 400px;
 
-    /* Centers Item when fewer than max columns */
-    margin: auto;
-
-    /* Prevents Overflow */
-    overflow: hidden;
-
     /* Makes sure the Cropping Affects Feet but not Heads */
     object-fit: cover;
     object-position: 50% 50%;
@@ -27,6 +21,14 @@
     transition: transform 3.5s, box-shadow 3.5s;
 }
 
+#cover-img:hover {
+    transform: translateY(-5px) ;
+    box-shadow: 0 8px 16px rgba(242, 184, 114, 0.7);
+
+    /* Hover Colour */
+    background-color: #F2E5BD;
+}
+ 
 /* Tablet Mode */
 @media (max-width: 900px) {
     #cover-img {
