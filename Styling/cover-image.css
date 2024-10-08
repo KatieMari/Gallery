@@ -22,6 +22,7 @@
 }
 
 #cover-img:hover {
+    /* Slightly lifts Card on Hover */
     transform: translateY(-5px) ;
     box-shadow: 0 8px 16px rgba(242, 184, 114, 0.7);
 
