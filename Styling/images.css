@@ -1,8 +1,8 @@
 /* ============ Grid Style ============= */
 /* Used as the Container for each Image and Paragraph in the Gallery */
 .card {
-    max-width: 300px;
-    min-width: 200px;
+    max-width: 500px;
+    min-width: 300px;
 
     /* Centers Item when fewer than max columns */
     margin: auto;
@@ -27,7 +27,7 @@
 .card img {
     /* Size */
     width: 100%;
-    height: 300px;
+    height: 500px;
 
     /* Image Automatically crop to cover all the space it can */
     object-fit: cover;

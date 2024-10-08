@@ -1,8 +1,14 @@
 /* ============ Cover Image Style ============= */
 #cover-img {
     /* Width and Height */
-    width: 70%;
+    width: 80%;
     height: 400px;
+
+    /* Centers Item when fewer than max columns */
+    margin: auto;
+
+    /* Prevents Overflow */
+    overflow: hidden;
 
     /* Makes sure the Cropping Affects Feet but not Heads */
     object-fit: cover;
@@ -10,6 +16,15 @@
 
     /* Border */
     border-radius: 15px;
+
+    /* Colour */
+    background-color: #F2F2F2;
+
+    /* Shadow Effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+    /* Smooth Transform and Shadow Transition */
+    transition: transform 3.5s, box-shadow 3.5s;
 }
 
 /* Tablet Mode */
@@ -40,4 +55,3 @@
         display: none;
     }
 }
-

@@ -10,10 +10,10 @@
     grid-template-columns: repeat(4, 1fr);
 
     /* Makes Grid Areas match the */
-    grid-template-areas: 
-    "item1 item2 item3 item4"
-     "item5 item6 item7 item8" 
-     "item9 item10 item11 item12";
+    grid-template-areas:
+        "item1 item2 item3 item4"
+        "item5 item6 item7 item8"
+        "item9 item10 item11 item12";
 
     /* Add Spacing Between Items */
     gap: 20px;
@@ -103,7 +103,7 @@
             "item10"
             "item11"
             "item12";
-        
+
         /* Ensures Gap is Maintained */
         gap: 20px;
     }
