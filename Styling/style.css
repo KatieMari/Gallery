@@ -1,0 +1,79 @@
+/* Styles for all Website */
+* {
+    padding: 0;
+    margin: 0;
+    /* Adds Box Sizing for Better Layout Control */
+    box-sizing: border-box;
+}
+
+/* Body Background Colour */
+body {
+    background-color: #F28F6B;
+}
+
+/* Will Display content using Flex Property and be Centered */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Will Change the Flex Direction to a Column. An element need to have display: flex for this to work */
+.flex-col {
+    flex-direction: column;
+}
+
+/* Will Occupy 100% of the Viewpoint Width */
+.full-width {
+    width: 100vw;
+}
+
+/* Style for the Title Div */
+#title-div {
+    /* Colours */
+    color: #A66D3C;
+    background-color: #F2E5BD;
+
+    /* Size */
+    padding: 20px 40px;
+    margin: 20px auto;
+    /* Border */
+    border-radius: 15px;
+    border: 2px solid #A66D3C;
+
+    /* Shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+    /* Text Styling */
+    font-size: calc(1.2rem + 1.2vw + 1.2vh);
+    text-align: center;
+
+    /* Transition */
+    transition: transform 2.5s ease, box-shadow 2.5s ease;
+    margin-bottom: 30px;
+}
+
+/* Hover Effect for the Title Div */
+#title-div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    background-color: #F2B872;
+}
+
+/* Button Styles */
+button {
+    background-color: #F28F6B;
+    color: #F2F2F2;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 2s ease, transform 2s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #A66D3C;
+    transform: translateY(-2px);
+}

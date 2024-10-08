@@ -1,0 +1,110 @@
+/* Gallery Style */
+#gallery-div {
+    width: 100vw;
+    /* Default: Displays in a Row */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    /* Defines 4 Equal Columns for the Items */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* Makes Grid Areas match the */
+    grid-template-areas: 
+    "item1 item2 item3 item4"
+     "item5 item6 item7 item8" 
+     "item9 item10 item11 item12";
+
+    /* Add Spacing Between Items */
+    gap: 20px;
+
+    /* Padding for Symmetry */
+    padding: 20px;
+
+}
+
+/* Link Gallery Items to grid-area */
+#item1 {
+    grid-area: item1;
+}
+
+#item2 {
+    grid-area: item2;
+}
+
+#item3 {
+    grid-area: item3;
+}
+
+#item4 {
+    grid-area: item4;
+}
+
+#item5 {
+    grid-area: item5;
+}
+
+#item6 {
+    grid-area: item6;
+}
+
+#item7 {
+    grid-area: item7;
+}
+
+#item8 {
+    grid-area: item8;
+}
+
+#item9 {
+    grid-area: item9;
+}
+
+#item10 {
+    grid-area: item10;
+}
+
+#item11 {
+    grid-area: item11;
+}
+
+#item12 {
+    grid-area: item12;
+}
+
+/* Tablet Mode */
+@media (max-width: 1000px) {
+    #gallery-div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "item1 item2 item3 item4"
+            "item5 item6 item7 item8"
+            "item9 item10 item11 item12";
+
+        /* Ensures Gap is Maintained */
+        gap: 20px;
+    }
+}
+
+/* SmartPhone Mode */
+@media (max-width: 450px) {
+    #gallery-div {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "item1"
+            "item2"
+            "item3"
+            "item4"
+            "item5"
+            "item6"
+            "item7"
+            "item8"
+            "item9"
+            "item10"
+            "item11"
+            "item12";
+        
+        /* Ensures Gap is Maintained */
+        gap: 20px;
+    }
+}

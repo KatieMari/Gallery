@@ -1,0 +1,101 @@
+/* Imported Font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Heading and Title Styles */
+h1 {
+    /* H1 Font Family */
+    font-family: "Pacifico", sans-serif;
+    font-size: 4rem;
+
+    /* Padding and Margin */
+    padding: 10px;
+    margin: 20px auto;
+
+    /* Border Style */
+    border: 2px solid #A66D3C;
+    border-radius: 10px;
+
+    /* Colour */
+    background-color: #F2E5BD;
+    color: #A66D3C;
+
+    /* Text Center */
+    text-align: center;
+
+    /* Smooth Background Colour Transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 1s ease, transform 1s ease;
+
+    /* Added for Readability */
+    line-height: 1.3;
+
+    /* Spacing Adjustment */
+    margin-bottom: 20px;
+}
+
+p{
+    font-family: "Pacifico", sans-serif;
+    font-size: 1rem;
+}
+
+/* Media Query for the Heading - below 870px, keep title at one size and remove border */
+@media (max-width: 870px) {
+    h1 {
+        font-size: 2rem;
+        border: none;
+        padding: 0;
+
+        /* Removes Background Colour for Small Screens */
+        background-color: transparent;
+
+        /* Colour */
+        color: #F2B872;
+    }
+}
+
+/* Responsive Typography and Spacing */
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 2rem;
+
+        /* Adjusts Padding for Tablet Screens */
+        padding: 10px 5%;
+    }
+
+    #title-div {
+        font-size: 2rem;
+
+        /* Reduces Padding for Smaller Screens */
+        padding: 15px 20px;
+    }
+
+    /* Reduces Card Size */
+    .card {
+        max-width: 250px;
+    }
+
+    #cover-img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        /* Smaller Font for Mobile */
+        font-size: calc(1rem + 2vw);
+        padding: 10px 5%;
+    }
+
+    #title-div {
+        /* Adjusted Font Size for Mobile */
+        font-size: calc(1rem + 1vw);
+
+        /* Less Padding for Smaller Screens */
+        padding: 15px 20px;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+}
+

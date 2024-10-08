@@ -1,0 +1,57 @@
+/* ============ Grid Style ============= */
+/* Used as the Container for each Image and Paragraph in the Gallery */
+.card {
+    max-width: 300px;
+    min-width: 200px;
+
+    /* Centers Item when fewer than max columns */
+    margin: auto;
+
+    /* Prevents Overflow */
+    overflow: hidden;
+
+    /* Border */
+    border-radius: 15px;
+
+    /* Colour */
+    background-color: #F2F2F2;
+
+    /* Shadow Effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+    /* Smooth Transform and Shadow Transition */
+    transition: transform 3.5s, box-shadow 3.5s;
+}
+
+/* Style for Image inside a Card */
+.card img {
+    /* Size */
+    width: 100%;
+    height: 300px;
+
+    /* Image Automatically crop to cover all the space it can */
+    object-fit: cover;
+
+    /* Rounded Top Corners */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    /* Smooth Zoom Effect on Hover */
+    transition: transform 3.5s;
+}
+
+/* Adds Hover Effect to card */
+.card:hover {
+    /* Slightly Lifts the card on Hover */
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 16px rgba(242, 184, 114, 0.7);
+
+    /* Hover Colour */
+    background-color: #F2E5BD;
+}
+
+.card:hover img {
+    /* Slight Zoom on Hover */
+    transform: scale(1.15);
+}

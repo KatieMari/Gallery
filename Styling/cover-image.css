@@ -1,0 +1,43 @@
+/* ============ Cover Image Style ============= */
+#cover-img {
+    /* Width and Height */
+    width: 70%;
+    height: 400px;
+
+    /* Makes sure the Cropping Affects Feet but not Heads */
+    object-fit: cover;
+    object-position: 50% 50%;
+
+    /* Border */
+    border-radius: 15px;
+}
+
+/* Tablet Mode */
+@media (max-width: 900px) {
+    #cover-img {
+        object-position: 70% 50%;
+    }
+}
+
+/* Smartphone Mode */
+@media (max-width: 500px) {
+    #cover-img {
+        width: 90%;
+
+        /* Object Position */
+        object-fit: cover;
+        object-position: 60% 50%;
+
+        /* Increases Vertical Margin */
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* No Image Below 300px */
+@media (max-width: 300px) {
+    #cover-img {
+        display: none;
+    }
+}
+
