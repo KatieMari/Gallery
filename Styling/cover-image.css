@@ -1,4 +1,6 @@
 /* ============ Cover Image Style ============= */
+
+/* Styling for the Responsive Cover Image */
 #cover-img {
     /* Width and Height */
     width: 80%;
@@ -21,6 +23,7 @@
     transition: transform 3.5s, box-shadow 3.5s;
 }
 
+/* Hover Effect for Cover Image */
 #cover-img:hover {
     /* Slightly lifts Card on Hover */
     transform: translateY(-5px) ;
