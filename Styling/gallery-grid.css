@@ -1,4 +1,6 @@
-/* Gallery Style */
+/* ============ Gallery Grid Styles ============= */
+
+/* Defining a 4-Column Grid for Desktop Views */
 #gallery-div {
     width: 100vw;
     /* Default: Displays in a Row */
@@ -6,21 +8,20 @@
     justify-content: center;
     align-items: center;
 
-    /* Defines 4 Equal Columns for the Items */
-    grid-template-columns: repeat(4, 1fr);
-
-    /* Makes Grid Areas match the */
-    grid-template-areas:
-        "item1 item2 item3 item4"
-        "item5 item6 item7 item8"
-        "item9 item10 item11 item12";
-
     /* Add Spacing Between Items */
     gap: 20px;
 
     /* Padding for Symmetry */
     padding: 20px;
 
+    /* Defines 4 Equal Columns for the Items */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* Each Items Place in the Grid */
+    grid-template-areas:
+        "item1 item2 item3 item4"
+        "item5 item6 item7 item8"
+        "item9 item10 item11 item12";
 }
 
 /* Link Gallery Items to grid-area */
