@@ -74,13 +74,16 @@
 }
 
 /* Tablet Mode */
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     #gallery-div {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-            "item1 item2 item3 item4"
-            "item5 item6 item7 item8"
-            "item9 item10 item11 item12";
+            "item1 item2"
+            "item3 item4"
+            "item5 item6"
+            "item7 item8"
+            "item9 item10"
+            "item11 item12";
 
         /* Ensures Gap is Maintained */
         gap: 20px;
@@ -88,7 +91,7 @@
 }
 
 /* SmartPhone Mode */
-@media (max-width: 450px) {
+@media (max-width: 500px) {
     #gallery-div {
         grid-template-columns: 1fr;
         grid-template-areas:
