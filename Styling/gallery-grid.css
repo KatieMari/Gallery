@@ -74,7 +74,7 @@
 }
 
 /* Tablet Mode */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     #gallery-div {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
@@ -91,7 +91,7 @@
 }
 
 /* SmartPhone Mode */
-@media (max-width: 500px) {
+@media (max-width: 450px) {
     #gallery-div {
         grid-template-columns: 1fr;
         grid-template-areas:

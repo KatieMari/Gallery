@@ -55,8 +55,8 @@
     }
 }
 
-/* No Image Below 300px */
-@media (max-width: 300px) {
+/* No Image Below 400px */
+@media (max-width: 400px) {
     #cover-img {
         display: none;
     }
