@@ -59,21 +59,3 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
     background-color: #F2B872;
 }
-
-/* Button Styles */
-button {
-    background-color: #F28F6B;
-    color: #F2F2F2;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 2s ease, transform 2s ease;
-}
-
-/* Button Hover Effect */
-button:hover {
-    background-color: #A66D3C;
-    transform: translateY(-2px);
-}
