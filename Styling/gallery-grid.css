@@ -112,3 +112,33 @@
         gap: 20px;
     }
 }
+
+/* New Media Query for 600px */
+@media (max-width: 600px) {
+    #gallery-div {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "item1 item2"
+            "item3 item4"
+            "item5 item6"
+            "item7 item8"
+            "item9 item10"
+            "item11 item12";
+
+        /* Adjust Padding for Symmetry */
+        padding: 10px;
+
+        /* Ensures Gap is Maintained */
+        gap: 20px;
+    }
+
+    /* Ensuring Gallery Items are Responsive */
+    #gallery-div img {
+        /* Ensures Images Scale Within their Container */
+        max-width: 100%;
+        /* Maintains Image Aspect Ratio */
+        height: auto;
+        /* Includes Padding and Border in Total Width */
+        box-sizing: border-box;
+    }
+}
